@@ -1,6 +1,13 @@
 # README
 
-This app is demoing a failing helper test, supporting the reported rspec-rails issue https://github.com/rspec/rspec-rails/issues/2481
+This app contains two failing tests:
+
+* [A helper test](#helper-test), demoing the reported rspec-rails issue https://github.com/rspec/rspec-rails/issues/2481
+* [A model test](#model-test), demoing the reported rspec-rails issue https://github.com/rspec/rspec-rails/issues/2483
+
+## Helper test
+
+https://github.com/rspec/rspec-rails/issues/2481
 
 The example fails if following criteria is met:
 
@@ -15,7 +22,22 @@ You can set up the app and run the failing test with:
 git clone git@github.com:robinboening/rspec-issue-demo.git && \
   cd rspec-issue-demo && \
   bundle install && \
-  bundle exec rspec spec
+  bundle exec rspec spec/helpers
 ```
 
 The example should succeed, but it fails.
+
+## Model test
+
+https://github.com/rspec/rspec-rails/issues/2483
+
+The example fails when using Rails 6.1 (Rails 6.0.x works fine).
+
+You can set up the app and run the failing test with:
+
+```
+git clone git@github.com:robinboening/rspec-issue-demo.git && \
+  cd rspec-issue-demo && \
+  bundle install && \
+  bundle exec rspec spec/models
+```
